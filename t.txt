@@ -1,0 +1,4 @@
+START
+S0 S2;
+S S1 A compt=compt+1;
+END
