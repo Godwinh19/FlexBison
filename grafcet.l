@@ -46,12 +46,17 @@ ponctuation	[,;:?!\.]
 "A"		{ return(A); }
 "T"		{ return(T); }
 "wait"		{ return(WAIT); }
+"ordinaire"	{ return(ORDINAIRE); }
+"encap"		{ return(ENCAP); }
+"macro"		{ return(MACRO); }
+"endgraf"	{ return(ENDGRAF); }
 "("		{ return(OPEN); }
 ")"		{ return(CLOSE); }
 {op}		{ sprintf(yylval.str, "%s", yytext);return(OP); }
 {operator}	{ sprintf(yylval.str, "%s", yytext);return(OPERATOR); }
 {var}		{ sprintf(yylval.str, "%s", yytext);return(VARIABLE); }
 {sep}		{ return(WS); }
+{cond}		{ sprintf(yylval.str, "%s", yytext);return(COND); }
 {many_name}	{ sprintf(yylval.str, "%s", yytext);return(MANYNAME); }
 {name}		{ sprintf(yylval.str, "%s", yytext);return(NAME); }
 {comment}	{ return(COMMENT); }

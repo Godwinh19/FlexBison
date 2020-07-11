@@ -1,16 +1,22 @@
 START
 S0 S2;
+macro
 C C1 a==1;
 S S1;
 # Aller de la premiere etape a la deuxieme
 T T1: go(S2,S3,C2);
 wait(1);
+endgraf
+ordinaire
 S S2 A compt=compt+1;
 C C2 compt<5;
 C C3 compt==5;
+encap
 T T2: go(S2,S1,C2);
 S S3;
 S S4;
+endgraf
 #Aller a deux etats a la condition C3
 T T3: go(S2,:S3:S4,C3);
+endgraf
 END
