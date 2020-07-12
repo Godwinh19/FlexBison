@@ -51,30 +51,28 @@ extern int yydebug;
     ENDGRAF = 261,
     ENCAP = 262,
     MACRO = 263,
-    TRANSITION = 264,
-    CONDITION = 265,
-    IDENT = 266,
-    COMMENT = 267,
-    GO = 268,
-    OPEN = 269,
-    CLOSE = 270,
-    MANYNAME = 271,
-    NAME = 272,
-    OP = 273,
-    WAIT = 274,
-    EQUAL = 275,
-    SEMICOLON = 276,
-    COMMA = 277,
-    WS = 278,
-    COLON = 279,
-    OPERATOR = 280,
-    COND = 281,
-    S = 282,
-    A = 283,
-    C = 284,
-    T = 285,
-    S0 = 286,
-    VARIABLE = 287
+    IDENT = 264,
+    COMMENT = 265,
+    GO = 266,
+    OPEN = 267,
+    CLOSE = 268,
+    MANYNAME = 269,
+    NAME = 270,
+    OP = 271,
+    WAIT = 272,
+    EQUAL = 273,
+    SEMICOLON = 274,
+    COMMA = 275,
+    WS = 276,
+    COLON = 277,
+    OPERATOR = 278,
+    COND = 279,
+    S = 280,
+    A = 281,
+    C = 282,
+    T = 283,
+    S0 = 284,
+    VARIABLE = 285
   };
 #endif
 
@@ -83,10 +81,10 @@ extern int yydebug;
 
 union YYSTYPE
 {
-#line 19 "grafcet.y" /* yacc.c:1909  */
+#line 18 "grafcet.y" /* yacc.c:1909  */
  char str[0x255]; double real; int integer; 
 
-#line 90 "progY.hpp" /* yacc.c:1909  */
+#line 88 "progY.hpp" /* yacc.c:1909  */
 };
 
 typedef union YYSTYPE YYSTYPE;

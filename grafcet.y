@@ -11,8 +11,7 @@ extern FILE * yyin;
 %}
 
 %token START END ORDINAIRE ENDGRAF ENCAP MACRO
-%token TRANSITION CONDITION IDENT
-%token COMMENT
+%token IDENT COMMENT
 %token GO OPEN CLOSE MANYNAME NAME OP WAIT
 %token EQUAL SEMICOLON COMMA WS COLON OPERATOR COND
 %token S A C T S0 VARIABLE
@@ -31,9 +30,9 @@ bloc : bloc inst
 inst : expr { cerr <<" " << endl; }
      | type expr
 ;
-type : ENCAP { ++nEncap ; cerr <<"grafcet encapsulant" << endl; }
-     | MACRO { ++nMacro ; cerr <<"grafcet macro-etape" << endl; }
-     | ORDINAIRE { ++nOrdi ; cerr <<"grafcet ordinaire" << endl; }
+type : ENCAP { ++nEncap ; cerr <<"GRAFCET ENCAPSULANT" << endl; }
+     | MACRO { ++nMacro ; cerr <<"MACRO-ETAPE" << endl; }
+     | ORDINAIRE { ++nOrdi ; cerr <<"GRAFCET ORDINAIRE" << endl; }
 ;
      
 expr : trans { ++nT ; cerr <<"transition° " << nT << endl; }
